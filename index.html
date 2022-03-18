@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <title>Alice restaurant opgave</title>
+  </head>
+  <body>
+
+  <h1>Velkommen til Alice restaurant<h1>
+
+<!--Vis vejret på siden ved brug af API-->
+
+    <div id="result"></div>
+        <div id="Aarhus"></div>
+
+
+
+<!-- Layout til kiosk med popper library-->
+    <div id="container">
+      <div id="salat" aria-describedby="tooltip"></div>
+      <div id="tooltip" role="tooltip">
+        <div>Cæsar salat</div>
+        <div>str &amp; Price</div>
+        <div>s: 50kr</div>
+        <div>m: 80</div>
+        <div>l: 100kr</div>
+        <div id="arrow" data-popper-arrow></div>
+        <button id="pris" onclick="this.parentNode.remove()">Tilføj</button>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="laks" aria-describedby="tooltip"></div>
+      <div id="tooltip" role="tooltip">
+        <div>Marineret laks</div>
+        <div>str &amp; Priser</div>
+        <div>s: 50kr</div>
+        <div>m: 80</div>
+        <div>l: 100kr</div>
+        <div id="arrow" data-popper-arrow></div>
+        <button class="pris" onclick="this.parentNode.remove()">Tilføj</button>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="avocado" aria-describedby="tooltip"></div>
+      <div id="tooltip" role="tooltip">
+        <div>Avocado mad</div>
+        <div>str &amp; Price</div>
+        <div>s: 50kr</div>
+        <div>m: 80</div>
+        <div>l: 100kr</div>
+        <div id="arrow" data-popper-arrow></div>
+        <button class="pris" onclick="this.parentNode.remove()">Tilføj</button>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="gnocchi" aria-describedby="tooltip"></div>
+      <div id="tooltip" role="tooltip">
+        <div>Hjemmelavet gnocchi</div>
+        <div>str &amp; Price</div>
+        <div>s: 50kr</div>
+        <div>m: 80</div>
+        <div>l: 100kr</div>
+        <div id="arrow" data-popper-arrow></div>
+        <button class="pris" onclick="this.parentNode.remove()">Tilføj</button>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="bowl" aria-describedby="tooltip"></div>
+      <div id="tooltip" role="tooltip">
+        <div>Mexi bowl</div>
+        <div>str &amp; Price</div>
+        <div>s: 50kr</div>
+        <div>m: 80</div>
+        <div>l: 100kr</div>
+        <div id="arrow" data-popper-arrow></div>
+        <button class="pris" onclick="this.parentNode.remove()">Tilføj</button>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="salat" aria-describedby="tooltip"></div>
+      <div id="tooltip" role="tooltip">
+        <div>Cæsar salat</div>
+        <div>str &amp; Price</div>
+        <div>s: 50kr</div>
+        <div>m: 80</div>
+        <div>l: 100kr</div>
+        <div id="arrow" data-popper-arrow></div>
+        <button class="pris" onclick="this.parentNode.remove()">Tilføj</button>
+      </div>
+    </div>
+
+    <div id="bestillinger">Her er bestillinger</div>
+    <hr>
+      <div id="ialt"></div>
+      <hr>
+      <div id="ialt"></div>
+      <button id="betal">Betal</button>
+
+      <main>
+        <section id="menu">
+          <h2>Menu</h2>
+          <div id="citat"></div>
+        </section>
+        <aside id="praktiskInfo">
+          <div>
+            <h2>Åbningstider</h2>
+          </div>
+          <div>
+            <h2>Hvem er vi?</h2>
+            <ul id="hvem"></ul>
+          </div>
+          <div>
+            <h2>Hvor er vi?</h2>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <!-- spørgsmål 1: studiedag 1 -->
+        <div id="footerInfo"></div>
+      </footer>
+
+    <script src="js/js.js"></script>
+
+
+  </body>
+</html>

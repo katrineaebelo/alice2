@@ -1,0 +1,183 @@
+
+/**
+ Alice's Restaurant Aarhus
+ Opgave 2
+ **/
+
+
+:root {
+--sort: #000;
+--hvid: #fff;
+--brun: #baaca1;
+--morkbrun: #60554c;
+--morkblaa: #272a56;
+/* typografisk */
+--font-a: 'Fruktur', cursive;
+--font-b: 'Libre Franklin', sans-serif;
+--font-c: 'Roboto', sans-serif;
+/* whitespace */
+--whitesp: 5rem;
+}
+
+h1{
+  font-family: var(--font-b);
+  text-align: center;
+  color: #f4f3ed;
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-b);
+  font-weight: bold;
+  color: var(--morkblaa);
+}
+
+body {
+  font-family: var(--font-c);
+  background-color: var(--morkblaa);
+  font-family: -apple-system, Helvetica Neue, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Open Sans, sans-serif;
+  text-transform: uppercase;
+}
+
+
+/**
+ Styles til container med produkter
+ **/
+
+#container {
+  display: inline-block;
+  width: 400px;
+  height: 350px;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  border: 2px dashed var(--morkblaa);
+  background-color: #f4f3ed;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+#salat {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: url('../images/salat.jpg');
+  margin-left: 40px;
+}
+
+#laks {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: url('../images/laks.jpg');
+  margin-left: 40px;
+}
+
+#avocado{
+  display: inline-block;
+  width: 200px;
+  height: 198px;
+  background-image: url('../images/avocado.jpg');
+  margin-left: 40px;
+}
+
+#gnocchi {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: url('../images/gnocchi.jpg');
+  margin-left: 40px;
+}
+
+#bowl {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: url('../images/bowl.jpg');
+  margin-left: 40px;
+}
+
+
+
+#container::before,
+#container::after {
+  content: '';
+  display: flex;
+  width: 10px;
+  height: 100px;
+}
+
+#tooltip {
+  display: inline-block;
+  background: #ffffff;
+  color: var(--morkblaa);
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+#arrow,
+#arrow::before {
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+#arrow {
+  visibility: hidden;
+}
+
+#arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+#tooltip[data-popper-placement^='top'] > #arrow {
+  bottom: -4px;
+}
+
+#tooltip[data-popper-placement^='bottom'] > #arrow {
+  top: -4px;
+}
+
+#tooltip[data-popper-placement^='left'] > #arrow {
+  right: -4px;
+}
+
+#tooltip[data-popper-placement^='right'] > #arrow {
+  left: -4px;
+}
+
+createPopper(popcorn, tooltip, {
+  placement: 'bottom-end',});
+
+
+  /**
+   Styles vejr
+   **/
+  .weatherInfo {
+      border: 1px solid #2E4CC4;
+      text-align: center;
+  }
+
+  vejrsymbol{
+    size: 50px;
+  }
+
+
+  footer {
+    background-color: var(--morkblaa);
+    text-align: center;
+    min-height: 45px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    width: 100%;
+    color: #ffffff;
+  }
